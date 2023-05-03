@@ -1,0 +1,4 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  cn.soe.boot.autoconfigure.context.SoeEnvironmentPostProcessor
+org.springframework.context.ApplicationListener=\
+  cn.soe.boot.autoconfigure.context.SoeApplicationListener
