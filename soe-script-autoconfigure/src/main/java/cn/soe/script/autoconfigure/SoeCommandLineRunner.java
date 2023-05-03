@@ -4,11 +4,15 @@ import cn.soe.boot.core.util.SoeUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 
 /**
  * @author xiezhenxiang 2023/4/28
  */
-@SpringBootApplication(scanBasePackages = "cn.soe.script.demo")
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, DataSourceAutoConfiguration.class,
+        JpaRepositoriesAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
 public abstract class SoeCommandLineRunner implements CommandLineRunner {
 
     public static void main(String[] args) {
