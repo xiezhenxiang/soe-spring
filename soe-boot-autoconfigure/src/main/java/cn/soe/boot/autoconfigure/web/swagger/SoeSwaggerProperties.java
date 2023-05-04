@@ -9,7 +9,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  **/
 @Getter
 @Setter
-@ConfigurationProperties("swagger")
+@ConfigurationProperties("soe.swagger")
 public class SoeSwaggerProperties {
 
     /**

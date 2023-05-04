@@ -1,7 +1,6 @@
 package cn.soe.boot.autoconfigure.context;
 
 import cn.soe.boot.core.util.SoeUtils;
-import cn.soe.utl.ObjectUtils;
 import cn.soe.utl.regex.RegexUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor;
@@ -11,7 +10,6 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertiesPropertySource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
-import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.StringUtils;
 
