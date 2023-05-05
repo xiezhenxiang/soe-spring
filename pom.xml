@@ -45,7 +45,7 @@
         <mapstruct.version>1.5.2.Final</mapstruct.version>
         <fastjson.version>1.2.83</fastjson.version>
         <fastjson2.version>2.0.14</fastjson2.version>
-        <jsoup.version>1.15.3</jsoup.version>
+        <jsoup.version>1.16.1</jsoup.version>
         <lombok.version>1.18.12</lombok.version>
     </properties>
 

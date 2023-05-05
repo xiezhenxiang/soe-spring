@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -15,26 +16,28 @@ import org.springframework.web.filter.CorsFilter;
  * @author xiezhenxiang 2021/9/13
  */
 @Configuration
-@EnableConfigurationProperties(CorsProperties.class)
+@EnableConfigurationProperties(CorsFilterProperties.class)
 @ConditionalOnProperty(prefix = "soe.cors", name = "enable", havingValue = "true")
 public class CorsFilterConfiguration {
 
-    private final CorsProperties corsProperties;
+    public static final int ORDER = Ordered.HIGHEST_PRECEDENCE;
+    private static final String FILTER_NAME = "soeCorsFilter";
+    private final CorsFilterProperties corsProperties;
 
-    public CorsFilterConfiguration(CorsProperties corsProperties) {
+    public CorsFilterConfiguration(CorsFilterProperties corsProperties) {
         this.corsProperties = corsProperties;
     }
 
     @Bean
     public FilterRegistrationBean<CorsFilter> corsFilterRegistration(CorsConfigurationSource corsConfigurationSource) {
         FilterRegistrationBean<CorsFilter> filterRegistrationBean = new FilterRegistrationBean<>(new CorsFilter(corsConfigurationSource));
-        filterRegistrationBean.setOrder(corsProperties.getOrder());
-        filterRegistrationBean.setName(corsProperties.getName());
+        filterRegistrationBean.setOrder(ORDER);
+        filterRegistrationBean.setName(FILTER_NAME);
         return filterRegistrationBean;
     }
 
     @Bean
-    @ConditionalOnMissingBean(name = "corsConfigurationSource")
+    @ConditionalOnMissingBean
     public CorsConfigurationSource corsConfigurationSource() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration corsConfiguration = new CorsConfiguration();

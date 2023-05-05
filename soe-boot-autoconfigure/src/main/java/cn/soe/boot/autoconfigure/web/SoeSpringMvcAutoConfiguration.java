@@ -3,6 +3,8 @@ package cn.soe.boot.autoconfigure.web;
 import cn.soe.boot.autoconfigure.web.exception.BizExceptionHandler;
 import cn.soe.boot.autoconfigure.web.exception.SoeErrorControllerHandler;
 import cn.soe.boot.autoconfigure.web.filter.cors.CorsFilterConfiguration;
+import cn.soe.boot.autoconfigure.web.filter.xss.XssFilterConfiguration;
+import cn.soe.boot.autoconfigure.web.security.WebSecurityConfiguration;
 import cn.soe.boot.autoconfigure.web.swagger.SoeSwaggerConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -24,7 +26,7 @@ import javax.servlet.Servlet;
 @AutoConfigureBefore({ErrorMvcAutoConfiguration.class})
 @ConditionalOnClass({Servlet.class, DispatcherServlet.class})
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
-@Import({BizExceptionHandler.class, SoeSwaggerConfiguration.class, CorsFilterConfiguration.class})
+@Import({BizExceptionHandler.class, SoeSwaggerConfiguration.class, CorsFilterConfiguration.class, XssFilterConfiguration.class, WebSecurityConfiguration.class})
 public class SoeSpringMvcAutoConfiguration {
 
     @Bean

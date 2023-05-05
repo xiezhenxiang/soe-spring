@@ -14,14 +14,12 @@ import java.util.List;
 @Getter
 @Setter
 @ConfigurationProperties("soe.cors")
-public class CorsProperties {
+public class CorsFilterProperties {
 
     /**
      * 是否启用跨域,默认为true
      */
     private boolean enable = true;
-    private String name = "defaultCorsFilter";
-    private int order = Ordered.HIGHEST_PRECEDENCE;
     private String pattern = "/**";
     private Boolean allowCredentials;
     private String allowedOrigin = CorsConfiguration.ALL;

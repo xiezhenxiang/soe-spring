@@ -21,7 +21,7 @@ public class ReturnT<T> implements Serializable  {
     public static final int SUCCESS_CODE = 200;
     private static final String SUCCESS_MSG = "ok";
     private static final int DEFAULT_ERROR_CODE = 500;
-    private static final String DEFAULT_ERROR_MSG = "Undefined Error";
+    private static final String DEFAULT_ERROR_MSG = "Internal Server Error";
 
     private int code;
     private String msg;
