@@ -13,7 +13,7 @@ import java.util.List;
  */
 public abstract class SoeCommandLineRunner implements CommandLineRunner {
 
-    public static void main(String[] args) {
+    public static void mainInit(String[] args) {
         List<Class<?>> subClass = ClassUtils.getAllSubClass(SoeCommandLineRunner.class);
         if (subClass.size() != 1) {
             throw new BizException("not find class or find size over 1 for class SoeCommandLineRunner");

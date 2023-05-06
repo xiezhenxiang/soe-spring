@@ -67,6 +67,10 @@ public class SoeUtils {
         return version == null ? "0.0.0" : version;
     }
 
+    public static <T> T getEnvProperty(String key, Class<T> clazz) {
+        return getBean(ConfigurableEnvironment.class).getProperty(key, clazz);
+    }
+
     /**
      * 添加优先级最高的配置
      **/

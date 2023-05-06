@@ -29,6 +29,10 @@
                     <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
                     <groupId>com.github.xiaoymin</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>spring-boot-starter-actuator</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
     </dependencies>
