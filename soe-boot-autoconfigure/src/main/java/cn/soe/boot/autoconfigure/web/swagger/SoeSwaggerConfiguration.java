@@ -1,5 +1,6 @@
 package cn.soe.boot.autoconfigure.web.swagger;
 
+import cn.soe.boot.autoconfigure.web.SoeWebConfiguration;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
@@ -9,7 +10,6 @@ import org.springdoc.core.customizers.GlobalOpenApiCustomizer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * @author xiezhenxiang 2021/9/13
  */
-@Configuration
+@SoeWebConfiguration
 @EnableConfigurationProperties(SoeSwaggerProperties.class)
 public class SoeSwaggerConfiguration {
 

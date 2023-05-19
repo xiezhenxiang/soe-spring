@@ -1,30 +1,34 @@
 package cn.soe.boot.autoconfigure.web;
 
+import cn.soe.boot.autoconfigure.web.actuator.SoeControllerEndPoint;
+import cn.soe.boot.autoconfigure.web.exception.BizExceptionHandler;
 import cn.soe.boot.autoconfigure.web.exception.SoeErrorControllerHandler;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.DispatcherServlet;
-
-import javax.servlet.Servlet;
 
 /**
  * @author xiezhenxiang 2023/4/27
  **/
-@Configuration
+@SoeWebConfiguration
 @AutoConfigureBefore({ErrorMvcAutoConfiguration.class})
-@ConditionalOnClass({Servlet.class, DispatcherServlet.class})
-@ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
-public class SoeSpringMvcAutoConfiguration {
+public class SoeWebAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(ErrorController.class)
-    public SoeErrorControllerHandler soeErrorControllerHandler() {
+    public SoeErrorControllerHandler errorControllerHandler() {
         return new SoeErrorControllerHandler();
+    }
+
+    @Bean
+    public BizExceptionHandler bizExceptionHandler() {
+        return new BizExceptionHandler();
+    }
+
+    @Bean
+    public SoeControllerEndPoint controllerEndPoint() {
+        return new SoeControllerEndPoint();
     }
 }

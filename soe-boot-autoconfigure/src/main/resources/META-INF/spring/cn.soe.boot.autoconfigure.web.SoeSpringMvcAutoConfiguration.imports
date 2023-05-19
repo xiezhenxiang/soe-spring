@@ -1,6 +1,0 @@
-cn.soe.boot.autoconfigure.web.exception.BizExceptionHandler
-cn.soe.boot.autoconfigure.web.swagger.SoeSwaggerConfiguration
-cn.soe.boot.autoconfigure.web.filter.cors.CorsFilterConfiguration
-cn.soe.boot.autoconfigure.web.filter.xss.XssFilterConfiguration
-cn.soe.boot.autoconfigure.web.security.WebSecurityConfiguration
-cn.soe.boot.autoconfigure.web.actuator.SoeControllerEndPoint

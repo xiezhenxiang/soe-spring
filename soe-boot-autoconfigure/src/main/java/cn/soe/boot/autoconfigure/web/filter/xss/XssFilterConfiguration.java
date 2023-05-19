@@ -1,17 +1,17 @@
 package cn.soe.boot.autoconfigure.web.filter.xss;
 
+import cn.soe.boot.autoconfigure.web.SoeWebConfiguration;
 import cn.soe.boot.autoconfigure.web.filter.RequestParamProcessorFilter;
 import cn.soe.boot.autoconfigure.web.filter.cors.CorsFilterConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @author xiezhenxiang 2023/5/4
  **/
-@Configuration
+@SoeWebConfiguration
 @ConditionalOnProperty(prefix = "soe.xss", name = "enable", havingValue = "true")
 @EnableConfigurationProperties({XssFilterProperties.class})
 public class XssFilterConfiguration {

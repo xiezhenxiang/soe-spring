@@ -1,4 +1,4 @@
-package cn.soe.utl.regex;
+package cn.soe.util.regex;
 
 import java.util.ArrayList;
 import java.util.List;

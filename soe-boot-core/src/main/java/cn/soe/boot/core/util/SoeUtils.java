@@ -1,6 +1,6 @@
 package cn.soe.boot.core.util;
 
-import cn.soe.utl.ObjectUtils;
+import cn.soe.util.common.ObjectUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertiesPropertySource;

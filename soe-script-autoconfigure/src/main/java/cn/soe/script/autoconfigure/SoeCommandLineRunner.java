@@ -2,7 +2,7 @@ package cn.soe.script.autoconfigure;
 
 import cn.soe.boot.core.exception.BizException;
 import cn.soe.boot.core.util.SoeUtils;
-import cn.soe.utl.ClassUtils;
+import cn.soe.util.common.ClassUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 

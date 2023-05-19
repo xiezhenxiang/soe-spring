@@ -1,1 +1,8 @@
-cn.soe.boot.autoconfigure.web.SoeSpringMvcAutoConfiguration
+cn.soe.boot.autoconfigure.web.SoeWebAutoConfiguration
+cn.soe.boot.autoconfigure.web.swagger.SoeSwaggerConfiguration
+cn.soe.boot.autoconfigure.web.filter.cors.CorsFilterConfiguration
+cn.soe.boot.autoconfigure.web.filter.xss.XssFilterConfiguration
+cn.soe.boot.autoconfigure.web.security.WebSecurityConfiguration
+cn.soe.boot.autoconfigure.minio.MinioAutoConfiguration
+cn.soe.boot.autoconfigure.mongo.MongoExtendAutoConfiguration
+cn.soe.boot.autoconfigure.redis.RedisExtendAutoConfiguration

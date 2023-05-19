@@ -2,3 +2,7 @@ org.springframework.boot.env.EnvironmentPostProcessor=\
   cn.soe.boot.autoconfigure.context.SoeEnvironmentPostProcessor
 org.springframework.context.ApplicationListener=\
   cn.soe.boot.autoconfigure.context.SoeApplicationListener
+org.springframework.beans.factory.config.BeanPostProcessor=\
+  cn.soe.boot.autoconfigure.context.SoeBeanPostProcessor
+org.springframework.context.ApplicationContextInitializer=\
+  cn.soe.boot.autoconfigure.context.SoeApplicationContextInitializer

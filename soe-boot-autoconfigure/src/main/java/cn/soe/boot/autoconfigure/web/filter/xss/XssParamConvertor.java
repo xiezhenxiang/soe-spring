@@ -10,8 +10,8 @@ import org.jsoup.safety.Safelist;
 import java.util.function.Function;
 
 /**
+ * @see  <a href="https://gitee.com/596392912/mica/tree/master/mica-xss">...</a>
  * @author xiezhenxiang 2023/5/5
- * <a href="https://gitee.com/596392912/mica/tree/master/mica-xss">...</a>
  */
 @Slf4j
 public class XssParamConvertor implements Function<String, String> {

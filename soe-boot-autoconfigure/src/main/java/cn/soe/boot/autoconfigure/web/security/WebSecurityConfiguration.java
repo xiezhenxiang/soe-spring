@@ -1,10 +1,9 @@
 package cn.soe.boot.autoconfigure.web.security;
 
+import cn.soe.boot.autoconfigure.web.SoeWebConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -16,13 +15,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @since  <a href="https://blog.csdn.net/qq_18841277/article/details/128247535">...</a>
+ * @see <a href="https://blog.csdn.net/qq_18841277/article/details/128247535">...</a>
  * @author xiezhenxiang 2023/4/27
  **/
-@Configuration
+@SoeWebConfiguration
 @ConditionalOnClass(WebSecurity.class)
 @EnableConfigurationProperties(WebSecurityProperties.class)
-@ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
 public class WebSecurityConfiguration {
 
     private final String[] defaultExcludePaths = {"/v2/api-docs", "/swagger-resources/**", ",/doc.html", "/webjars/**", "/error", "/favicon.ico"};

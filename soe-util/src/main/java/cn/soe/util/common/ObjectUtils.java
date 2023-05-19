@@ -1,4 +1,4 @@
-package cn.soe.utl;
+package cn.soe.util.common;
 
 import java.lang.reflect.Array;
 import java.util.Collection;
