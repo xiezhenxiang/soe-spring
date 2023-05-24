@@ -6,6 +6,5 @@ package cn.soe.util.database;
 public interface DbConnectTest {
 
     default void testConnect() {
-
     }
 }

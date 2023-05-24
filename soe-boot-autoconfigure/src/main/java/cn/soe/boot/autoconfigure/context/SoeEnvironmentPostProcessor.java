@@ -1,7 +1,7 @@
 package cn.soe.boot.autoconfigure.context;
 
 import cn.soe.boot.core.util.SoeUtils;
-import cn.soe.util.regex.RegexUtils;
+import cn.soe.util.common.RegexUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor;
 import org.springframework.boot.env.EnvironmentPostProcessor;
